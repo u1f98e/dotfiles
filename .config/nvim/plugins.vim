@@ -8,6 +8,8 @@ Plug 'thaerkh/vim-workspace' " Session managment and undo hist
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'pacha/vem-tabline' " Tabline
+
 " fzf (Fuzzy searching)
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -15,6 +17,9 @@ Plug 'junegunn/fzf.vim'
 " coc (Completion)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
+
+Plug 'majutsushi/tagbar' " Ctags browser
+Plug 'craigemery/vim-autotag' " Automatically Ctag files
 
 Plug 'godlygeek/tabular' " Alignment (:Tab)
 
@@ -27,7 +32,9 @@ Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 " autocmd! User vim-which-key call which_key#register('<Space>', 'g:which_key_map')
 
 Plug 'luochen1990/rainbow' " Parentheses colors
-Plug 'ciaranm/detectindent' " Indent settings detection
+let g:rainbow_active = 1
+
+Plug 'tpope/vim-sleuth' " Detect indentation
 Plug 'ryanoasis/vim-devicons' " Icons
 Plug 'yggdroot/indentline' " Indent Lines
 
