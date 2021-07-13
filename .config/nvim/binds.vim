@@ -46,6 +46,8 @@ nnoremap <silent> do V:diffget<cr>
 nnoremap <silent> dP :diffput<cr>
 nnoremap <silent> dO :diffget<cr>
 
-" These don't even work
+" Delete whole line on Shift-D
+nnoremap <S-d> 0D
+
+" Plugins
 nmap <F8> :TagbarToggle<CR>
-nnoremap <C-/> :Commentary<CR>
