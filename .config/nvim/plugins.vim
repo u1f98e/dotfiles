@@ -19,7 +19,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 
 Plug 'majutsushi/tagbar' " Ctags browser
-Plug 'craigemery/vim-autotag' " Automatically Ctag files
+Plug 'ludovicchabant/vim-gutentags'
 
 Plug 'godlygeek/tabular' " Alignment (:Tab)
 
@@ -35,10 +35,15 @@ Plug 'luochen1990/rainbow' " Parentheses colors
 let g:rainbow_active = 1
 
 Plug 'tpope/vim-sleuth' " Detect indentation
-Plug 'ryanoasis/vim-devicons' " Icons
 Plug 'yggdroot/indentline' " Indent Lines
+Plug 'ryanoasis/vim-devicons' " Icons
+Plug 'AndrewRadev/linediff.vim' " Do a diff on two selections
+Plug 'tomtom/tcomment_vim' " Comments
+
+Plug 'skywind3000/vim-quickui' " Sick menus
 
 Plug 'KeitaNakamura/neodark.vim'
 
 call plug#end()
+
 
