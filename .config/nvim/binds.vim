@@ -49,5 +49,20 @@ nnoremap <silent> dO :diffget<cr>
 " Delete whole line on Shift-D
 nnoremap <S-d> 0D
 
-" Plugins
+" Plugins """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <F8> :TagbarToggle<CR>
+
+" Fzf alt stuff
+if has('nvim')
+  tnoremap <a-a> <esc>a
+  tnoremap <a-b> <esc>b
+  tnoremap <a-d> <esc>d
+  tnoremap <a-f> <esc>f
+endif
+
+" Cutlass rebinds, make x cut instead of d
+nnoremap x d
+xnoremap x d
+
+nnoremap xx dd
+nnoremap X D

@@ -4,9 +4,10 @@ let g:quickui_color_scheme = 'papercol dark'
 
 " Binds
 nnoremap <F3> :call quickui#tools#preview_tag('')<cr>
-nnoremap ` :call quickui#menu#open()<cr>
+nnoremap <Space> :call quickui#menu#open()<cr>
+vnoremap <Space> :call quickui#menu#open()<cr>
 
-" Definitions ---------------------------------------
+" Menu ---------------------------------------
 call quickui#menu#reset()
 
 call quickui#menu#install('F&ile', [
@@ -14,6 +15,10 @@ call quickui#menu#install('F&ile', [
             \ [ "Close All", 'bufdo bd' ],
             \ [ "--", '' ],
             \ [ "E&xit", 'qa!' ],
+            \ ])
+
+call quickui#menu#install("&Edit", [
+            \ [ "Organize &Variables", 'OrgVars' ],
             \ ])
 
 call quickui#menu#install('&Find', [
@@ -28,7 +33,9 @@ call quickui#menu#install('&Find', [
 
 call quickui#menu#install("&Option", [
 			\ ['Set &Spell %{&spell? "Off":"On"}', 'set spell!'],
-			\ ['Set &Cursor Line %{&cursorline? "Off":"On"}', 'set cursorline!'],
+                        \ ['Set &Word Wrap %{&wrap? "Off":"On"}', 'set wrap!'],
+			\ ['Set Cursor &Line %{&cursorline? "Off":"On"}', 'set cursorline!'],
+			\ ['Set Cursor &Column %{&cursorcolumn? "Off":"On"}', 'set cursorcolumn!'],
 			\ ['Toggle &Relative LN %{&relativenumber? "Off":"On"}', 'set relativenumber!'],
 			\ ])
 
