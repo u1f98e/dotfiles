@@ -1,0 +1,7 @@
+theme = "autumn"
+[keys.normal]
+'{' = "goto_prev_paragraph"
+'}' = "goto_next_paragraph"
+
+[editor.cursor-shape]
+insert = "bar"
