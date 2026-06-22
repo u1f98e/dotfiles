@@ -1,7 +1,46 @@
-theme = "autumn"
-[keys.normal]
-'{' = "goto_prev_paragraph"
-'}' = "goto_next_paragraph"
+theme = "adwaita-dark"
+
+[editor]
+cursorline = true
+# clipboard-provider = "termcode"
+inline-diagnostics = { cursor-line = "hint" }
+auto-save = { focus-lost = true }
 
 [editor.cursor-shape]
 insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+nbsp = "all"
+nnbsp = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+[editor.indent-guides]
+render = true
+character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.file-picker]
+# git-ignore = true
+
+[keys.normal]
+n = ["save_selection", "search_next"]
+N = ["save_selection", "search_prev"]
+"[" = { "q" = "@<space>'<tab><ret>" }
+"]" = { "q" = "@<space>'<S-tab><ret>" }
+"{" = "goto_prev_paragraph"
+"}" = "goto_next_paragraph"
+
+[keys.normal.space]
+"." = "file_picker_in_current_buffer_directory"
